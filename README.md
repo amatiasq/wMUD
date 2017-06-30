@@ -1,0 +1,4 @@
+webMud
+=====
+
+A MUD client

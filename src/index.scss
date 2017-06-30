@@ -1,0 +1,14 @@
+@import "./terminal/index";
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+
+body, #main-container {
+  display: flex;
+  flex: 1;
+}

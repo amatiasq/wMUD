@@ -1,0 +1,51 @@
+.amq-terminal {
+  // Layout
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex: 1;
+
+  // Colors
+  color: white;
+  background-color: black;
+
+  // Font
+  font-family: monospace;
+  font-size: 1.5em;
+  word-break: break-word;
+
+
+  &-log {
+    // Reset
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    // Layout
+    display: flex;
+    overflow: scroll;
+    flex-direction: column;
+    flex: 1;
+
+    .first {
+      flex: 1;
+    }
+  }
+
+
+  &-cursor {
+    display: inline-block;
+    color: black;
+    background-color: white;
+    height: 100%;
+  }
+
+
+  &-real-input {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 10px;
+    height: 10px;
+  }
+}

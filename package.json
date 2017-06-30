@@ -1,0 +1,64 @@
+{
+  "name": "webMud",
+  "version": "0.0.0",
+  "description": "A MUD client",
+  "main": "index.tsx",
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "\\.spec\\.ts$",
+    "testPathIgnorePatterns": [
+      ".bakup"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "upload-coverage": "cat ./coverage/lcov.info | coveralls",
+    "build": "cd config; webpack --config ./webpack.config.js",
+    "lint": "tslint -c tslint.json --type-check --project tsconfig.json 'src/**/*.ts' 'src/**/*.tsx'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amatiasq/webMud.git"
+  },
+  "author": "A. Matías Quezada <amatiasq@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amatiasq/webMud/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "@types/react": "^15.0.33",
+    "@types/react-dom": "^15.5.1",
+    "coveralls": "^2.13.1",
+    "css-loader": "^0.28.4",
+    "jest": "^20.0.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-jest": "^20.0.6",
+    "ts-loader": "^2.2.0",
+    "tslint": "^5.4.3",
+    "tslint-language-service": "^0.9.6",
+    "typescript": "^2.4.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "homepage": "https://github.com/amatiasq/webMud#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
