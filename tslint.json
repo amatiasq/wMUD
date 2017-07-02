@@ -23,7 +23,7 @@
     "no-var-requires": true,
     "only-arrow-functions": [true, "allow-declarations"],
     "prefer-for-of": false,
-    "promise-function-async": true,
+    "promise-function-async": false,
     "typedef-whitespace": [
       true,
       {
@@ -56,7 +56,7 @@
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
-    "no-floating-promises": true,
+    "no-floating-promises": false,
     "no-inferred-empty-object-type": true,
     "no-invalid-template-strings": true,
     "no-invalid-this": [true, "check-function-in-method"],

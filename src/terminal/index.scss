@@ -1,4 +1,7 @@
 .amq-terminal {
+  @import './ansi';
+
+
   // Layout
   display: flex;
   flex-direction: column;

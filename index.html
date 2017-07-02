@@ -10,47 +10,53 @@
 log.indent = 1;
 window.log = log;
 
-function log(target, key, descriptor) {
+function log({oneLine = false} = {}) {
+  return (target, key, descriptor) => {
     if (key)
-        return logMethod(target.constructor, key, descriptor);
+      return logMethod(target.constructor, key, descriptor);
     else
-        return logClass(target);
+      return logClass(target);
+  };
 
-    function logClass(Class) {
-        const descriptors = {};
+  function logClass(Class) {
+    const descriptors = {};
 
-        Reflect.ownKeys(Class.prototype).forEach(key => {
-            const descriptor = Reflect.getOwnPropertyDescriptor(Class.prototype, key);
-            descriptors[key] = descriptor;
+    Reflect.ownKeys(Class.prototype).forEach(key => {
+      const descriptor = Reflect.getOwnPropertyDescriptor(Class.prototype, key);
+      descriptors[key] = descriptor;
 
-            if (key !== 'constructor' || typeof value === 'function')
-                logMethod(Class.name, key, descriptor);
-        });
+      if (key !== 'constructor' || typeof value === 'function')
+        logMethod(Class.name, key, descriptor);
+    });
 
-        Class.prototype = Object.create(
-            Object.getPrototypeOf(Class.prototype),
-            descriptors
-        );
+    Class.prototype = Object.create(
+      Object.getPrototypeOf(Class.prototype),
+      descriptors
+    );
 
-        return Class;
-    }
+    return Class;
+  }
 
-    function logMethod(Class, key, descriptor) {
-        const {value} = descriptor;
-        const method = Class.name + '.' + key;
+  function logMethod(Class, key, descriptor) {
+    const {value} = descriptor;
+    const method = Class.name + '.' + key;
 
-        descriptor.value = function() {
-            const prefix = '|---'.repeat(log.indent) + method;
-            log.indent++;
-            console.log(prefix, '(', ...arguments, ')');
-            const result = value.apply(this, arguments);
-            console.log(prefix, '<', result && result.$$typeof ? result.$$typeof : result);
-            log.indent--;
-            return result;
-        };
+    descriptor.value = function() {
+      const prefix = '|---'.repeat(log.indent) + method;
+      log.indent++;
+      if (!oneLine)
+        console.log(prefix, '(', ...arguments, ')');
+      const result = value.apply(this, arguments);
+      if (oneLine)
+        console.log(prefix, '(', ...arguments, ') >', result && result.$$typeof ? result.$$typeof : result);
+      else
+        console.log(prefix, '<', result && result.$$typeof ? result.$$typeof : result);
+      log.indent--;
+      return result;
+    };
 
-        return descriptor;
-    }
+    return descriptor;
+  }
 }
 /* eslint-enable */
     </script>

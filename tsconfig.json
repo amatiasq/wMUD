@@ -1,8 +1,13 @@
 {
-  "include": [ "src/**/*.ts", "src/**/*.tsx" ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "server/**/*.ts"
+  ],
   "exclude": [ "node_modules" ],
 
   "compilerOptions": {
+    "outDir": "server.out",
     "noImplicitAny": true,
     "experimentalDecorators": true,
 

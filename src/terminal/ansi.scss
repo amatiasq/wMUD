@@ -1,0 +1,86 @@
+// Decorations
+.ansi-underline { text-decoration: underline }
+.ansi-strike    { text-decoration: line-through }
+.ansi-italics   { font-style: italic }
+.ansi-bold      { font-weight: bold }
+.ansi-underline.ansi-strike { text-decoration: underline line-through }
+
+// Foreground color
+.ansi-fg-black    { color: #000 }
+.ansi-fg-red      { color: #A00 }
+.ansi-fg-green    { color: #0A0 }
+.ansi-fg-yellow   { color: #A50 }
+.ansi-fg-blue     { color: #00A }
+.ansi-fg-magenta  { color: #A0A }
+.ansi-fg-cyan     { color: #0AA }
+.ansi-fg-white    { color: #AAA }
+
+// Bold foreground color
+.ansi-bold.ansi-fg-black    { color: #555 }
+.ansi-bold.ansi-fg-red      { color: #F55 }
+.ansi-bold.ansi-fg-green    { color: #5F5 }
+.ansi-bold.ansi-fg-yellow   { color: #FF5 }
+.ansi-bold.ansi-fg-blue     { color: #55F }
+.ansi-bold.ansi-fg-magenta  { color: #F5F }
+.ansi-bold.ansi-fg-cyan     { color: #5FF }
+.ansi-bold.ansi-fg-white    { color: #FFF }
+
+// Inverse foreground color
+.ansi-inverse.ansi-fg-black    { background-color: #000 !important }
+.ansi-inverse.ansi-fg-red      { background-color: #A00 !important }
+.ansi-inverse.ansi-fg-green    { background-color: #0A0 !important }
+.ansi-inverse.ansi-fg-yellow   { background-color: #A50 !important }
+.ansi-inverse.ansi-fg-blue     { background-color: #00A !important }
+.ansi-inverse.ansi-fg-magenta  { background-color: #A0A !important }
+.ansi-inverse.ansi-fg-cyan     { background-color: #0AA !important }
+.ansi-inverse.ansi-fg-white    { background-color: #AAA !important }
+
+// Inverse bold foreground color
+.ansi-inverse.ansi-bold.ansi-fg-black    { background-color: #555 !important }
+.ansi-inverse.ansi-bold.ansi-fg-red      { background-color: #F55 !important }
+.ansi-inverse.ansi-bold.ansi-fg-green    { background-color: #5F5 !important }
+.ansi-inverse.ansi-bold.ansi-fg-yellow   { background-color: #FF5 !important }
+.ansi-inverse.ansi-bold.ansi-fg-blue     { background-color: #55F !important }
+.ansi-inverse.ansi-bold.ansi-fg-magenta  { background-color: #F5F !important }
+.ansi-inverse.ansi-bold.ansi-fg-cyan     { background-color: #5FF !important }
+.ansi-inverse.ansi-bold.ansi-fg-white    { background-color: #FFF !important }
+
+// Background color
+.ansi-bg-black    { background-color: #000 }
+.ansi-bg-red      { background-color: #A00 }
+.ansi-bg-green    { background-color: #0A0 }
+.ansi-bg-yellow   { background-color: #A50 }
+.ansi-bg-blue     { background-color: #00A }
+.ansi-bg-magenta  { background-color: #A0A }
+.ansi-bg-cyan     { background-color: #0AA }
+.ansi-bg-white    { background-color: #AAA }
+
+// Bold background color
+.ansi-bold.ansi-bg-black   { background-color: #555 }
+.ansi-bold.ansi-bg-red     { background-color: #F55 }
+.ansi-bold.ansi-bg-green   { background-color: #5F5 }
+.ansi-bold.ansi-bg-yellow  { background-color: #FF5 }
+.ansi-bold.ansi-bg-blue    { background-color: #55F }
+.ansi-bold.ansi-bg-magenta { background-color: #F5F }
+.ansi-bold.ansi-bg-cyan    { background-color: #5FF }
+.ansi-bold.ansi-bg-white   { background-color: #FFF }
+
+// Inverse background color
+.ansi-inverse.ansi-bg-black    { color: #000 !important }
+.ansi-inverse.ansi-bg-red      { color: #A00 !important }
+.ansi-inverse.ansi-bg-green    { color: #0A0 !important }
+.ansi-inverse.ansi-bg-yellow   { color: #A50 !important }
+.ansi-inverse.ansi-bg-blue     { color: #00A !important }
+.ansi-inverse.ansi-bg-magenta  { color: #A0A !important }
+.ansi-inverse.ansi-bg-cyan     { color: #0AA !important }
+.ansi-inverse.ansi-bg-white    { color: #AAA !important }
+
+// Inverse bold background color
+.ansi-inverse.ansi-bold.ansi-bg-black   { color: #555 !important }
+.ansi-inverse.ansi-bold.ansi-bg-red     { color: #F55 !important }
+.ansi-inverse.ansi-bold.ansi-bg-green   { color: #5F5 !important }
+.ansi-inverse.ansi-bold.ansi-bg-yellow  { color: #FF5 !important }
+.ansi-inverse.ansi-bold.ansi-bg-blue    { color: #55F !important }
+.ansi-inverse.ansi-bold.ansi-bg-magenta { color: #F5F !important }
+.ansi-inverse.ansi-bold.ansi-bg-cyan    { color: #5FF !important }
+.ansi-inverse.ansi-bold.ansi-bg-white   { color: #FFF !important }
